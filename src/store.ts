@@ -1,10 +1,16 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit'
 
 import counterReducer from './features/counter/counterSlice'
+import BankData from "./features/Card/card.slice";
+
+
 
 export function makeStore() {
   return configureStore({
-    reducer: { counter: counterReducer },
+    reducer: {
+      counter: counterReducer ,
+      newreducer : BankData
+    },
   })
 }
 
